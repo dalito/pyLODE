@@ -1,7 +1,8 @@
-.. image:: https://rawcdn.githack.com/RDFLib/pyLODE/b1ff1b1e19262cdc21ee28c7362b1690ca18e30b/img/pyLODE-250.png
+**This is a temporary fork!** The original project is at `RDFlib/pylode <https://github.com/RDFLib/pylode>`_.
+We quickly needed some changes in the pylode 2.x-branch for our `voc4cat <https://github.com/nfdi4cat/voc4cat>`_ SKOS vocabulary.
+Mainly we wanted to use full URIs as fragment IDs. We also have been renovating the packaging related files.
 
-.. image:: https://badge.fury.io/py/pyLODE.svg
-    :target: https://badge.fury.io/py/pyLODE
+.. image:: https://rawcdn.githack.com/RDFLib/pyLODE/b1ff1b1e19262cdc21ee28c7362b1690ca18e30b/img/pyLODE-250.png
 
 pyLODE
 ******
