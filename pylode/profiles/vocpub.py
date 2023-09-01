@@ -597,7 +597,7 @@ class VocPub(BaseProfile):
             concepts=self._make_skos_concepts(),
             namespaces=self._make_namespaces(),
             css=css,
-            pylode_version=__version__
+            pylode_version=__version__.split("+")[0]  # limit length to not break the layout
         )
 
     def generate_document(self):
