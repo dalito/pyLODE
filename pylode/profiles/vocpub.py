@@ -355,6 +355,11 @@ class VocPub(BaseProfile):
                         self.METADATA["historyNote"] = str(o)
                     else:
                         self.METADATA["historyNote"] = markdown.markdown(str(o))
+                    # TODO adapt this after finalizing provenance handling
+                    #    For now we hide historyNote. Newer vocpub profiles use
+                    #    it for provenance info which should not show up at the
+                    #    same place as a change note.
+                    self.METADATA["historyNote"] = None
 
                 # dates
                 if p in [DCTERMS.created, DCTERMS.modified, DCTERMS.issued]:
