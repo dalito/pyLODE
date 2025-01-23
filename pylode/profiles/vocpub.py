@@ -504,6 +504,11 @@ class VocPub(BaseProfile):
                 html = "<li>{}".format(self._make_formatted_uri(c))
                 if len(children) > 0:
                     for ch in sorted(children):
+                        if self.CONCEPTS.get(ch) is None:
+                            raise ValueError(
+                                f"Error rendering concept hierarchy for {ch}.\n"
+                                "Please remove the reference to this non-existing concept."
+                            )
                         html += "\n<ul>" + \
                                 _render(ch, self.CONCEPTS.get(ch).get("narrowers"), of, level=level + 1) + \
                                 "</ul>"
